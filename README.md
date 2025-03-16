@@ -20,8 +20,8 @@ The **Currency Converter** is a simple and elegant web application that allows u
 ## Installation 🛠️
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/your-repo/currency-converter.git
-   cd currency-converter
+   git clone https://github.com/muhammadshiraz/rails-currency-converter-multilingual.git
+   cd rails-currency-converter-multilingual
    ```
 
 2. **Install dependencies**
@@ -31,12 +31,12 @@ The **Currency Converter** is a simple and elegant web application that allows u
 
 3. **Start the Rails server**
    ```sh
-   rails server
+   rails s
    ```
 
 4. **Open in browser**
    ```sh
-   http://localhost:3000
+   http://127.0.0.1:3000
    ```
 
 ## Usage 📌
@@ -58,11 +58,11 @@ The **Currency Converter** is a simple and elegant web application that allows u
 ## API Integration 🔗
 This app uses an **Exchange Rate API** to fetch real-time conversion rates. You can configure the API in:
 ```ruby
-config/api_keys.yml
+app/services/exchange_rate_service.rb
 ```
 
 ## Screenshots 📸
-![Currency Converter UI](path-to-your-screenshot.png)
+![Currency Converter UI](screenshot.png)
 
 ## Contributing 🤝
 Want to improve this project? Follow these steps:
@@ -77,8 +77,7 @@ This project is licensed under the **MIT License**.
 
 ## Contact 📬
 Have any questions or suggestions? Feel free to reach out!
-- **Email:** your.email@example.com
-- **GitHub:** [your-username](https://github.com/your-username)
-- **Twitter:** [@your-handle](https://twitter.com/your-handle)
+- **Email:** muhammadshiraz996@gmail.com
+- **GitHub:** [muhammadshiraz](https://github.com/muhammadshiraz)
 
 🚀 Happy Coding! 🎉
