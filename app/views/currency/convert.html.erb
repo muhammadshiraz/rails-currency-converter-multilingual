@@ -1,0 +1,50 @@
+<div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+  <h1 class="text-2xl font-bold mb-6 text-center"><%= t('currency_converter') %></h1>
+
+  <%= form_tag currency_convert_path(locale: I18n.locale), method: :get do %>
+    <div class="form-group">
+      <%= label_tag :amount, t('amount'), class: "block text-sm font-medium text-gray-700 mb-1" %>
+      <%= number_field_tag :amount, params[:amount], 
+          class: "w-full px-3 py-2 border rounded-md", 
+          step: 0.01,
+          required: true %>
+    </div>
+
+    <div class="flex gap-4">
+      <div class="form-group flex-1">
+        <%= label_tag :from_currency, t('from_currency'), class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= select_tag :from_currency, 
+            options_for_select(CurrencyController::CURRENCIES, params[:from_currency]),
+            class: "w-full px-3 py-2 border rounded-md" %>
+      </div>
+
+      <div class="form-group flex-1">
+        <%= label_tag :to_currency, t('to_currency'), class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= select_tag :to_currency, 
+            options_for_select(CurrencyController::CURRENCIES, params[:to_currency]),
+            class: "w-full px-3 py-2 border rounded-md" %>
+      </div>
+    </div>
+
+    <% if flash[:error] %>
+      <div class="text-red-500 text-sm mb-4">
+        <%= flash[:error] %>
+      </div>
+    <% end %>
+
+    <%= submit_tag t('get_exchange_rate'), 
+        class: "w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors" %>
+  <% end %>
+
+  <!-- Language Selector -->
+  <div class="mt-6">
+  <%= form_tag set_locale_path, method: :post do %>
+    <%= select_tag :locale,
+        options_for_select(@language_options || [], I18n.locale),
+        class: "w-full px-3 py-2 border rounded-md",
+        onchange: "this.form.submit()" %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <% end %>
+  
+  </div>
+</div>

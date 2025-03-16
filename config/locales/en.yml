@@ -1,0 +1,68 @@
+# Files in the config/locales directory are used for internationalization and
+# are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more about the API, please read the Rails Internationalization guide
+# at https://guides.rubyonrails.org/i18n.html.
+#
+# Be aware that YAML interprets the following case-insensitive strings as
+# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
+# must be quoted to be interpreted as strings. For example:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+
+en:
+  currency_converter: "Currency Converter"
+  amount: "Amount"
+  from_currency: "From Currency"
+  to_currency: "To Currency"
+  get_exchange_rate: "Get Exchange Rate"
+  conversion_error: "An error occurred during currency conversion"
+
+fr:
+  currency_converter: "Convertisseur de Devises"
+  amount: "Montant"
+  from_currency: "Devise d'origine"
+  to_currency: "Devise cible"
+  get_exchange_rate: "Obtenir le taux de change"
+  conversion_error: "Une erreur s'est produite lors de la conversion des devises"
+
+es:
+  currency_converter: "Convertidor de Moneda"
+  amount: "Cantidad"
+  from_currency: "Moneda de origen"
+  to_currency: "Moneda de destino"
+  get_exchange_rate: "Obtener el tipo de cambio"
+  conversion_error: "Se produjo un error durante la conversión de moneda"
+
+de:
+  currency_converter: "Währungsumrechner"
+  amount: "Betrag"
+  from_currency: "Ausgangswährung"
+  to_currency: "Zielwährung"
+  get_exchange_rate: "Wechselkurs abrufen"
+  conversion_error: "Ein Fehler ist bei der Währungsumrechnung aufgetreten"
+
+ar:
+  currency_converter: "محول العملات"
+  amount: "المبلغ"
+  from_currency: "من العملة"
+  to_currency: "إلى العملة"
+  get_exchange_rate: "احصل على سعر الصرف"
+  conversion_error: "حدث خطأ أثناء تحويل العملة"
