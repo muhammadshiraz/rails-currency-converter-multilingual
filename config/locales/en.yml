@@ -34,6 +34,7 @@ en:
   to_currency: "To Currency"
   get_exchange_rate: "Get Exchange Rate"
   conversion_error: "An error occurred during currency conversion"
+  converted_amount: "Converted Amount: %{amount}"
 
 fr:
   currency_converter: "Convertisseur de Devises"
@@ -42,6 +43,7 @@ fr:
   to_currency: "Devise cible"
   get_exchange_rate: "Obtenir le taux de change"
   conversion_error: "Une erreur s'est produite lors de la conversion des devises"
+  converted_amount: "Montant converti: %{amount}"
 
 es:
   currency_converter: "Convertidor de Moneda"
@@ -50,6 +52,7 @@ es:
   to_currency: "Moneda de destino"
   get_exchange_rate: "Obtener el tipo de cambio"
   conversion_error: "Se produjo un error durante la conversión de moneda"
+  converted_amount: "Cantidad convertida: %{amount}"
 
 de:
   currency_converter: "Währungsumrechner"
@@ -58,6 +61,7 @@ de:
   to_currency: "Zielwährung"
   get_exchange_rate: "Wechselkurs abrufen"
   conversion_error: "Ein Fehler ist bei der Währungsumrechnung aufgetreten"
+  converted_amount: "Umgerechneter Betrag: %{amount}"
 
 ar:
   currency_converter: "محول العملات"
@@ -66,3 +70,4 @@ ar:
   to_currency: "إلى العملة"
   get_exchange_rate: "احصل على سعر الصرف"
   conversion_error: "حدث خطأ أثناء تحويل العملة"
+  converted_amount: "المبلغ المحوّل: %{amount}"

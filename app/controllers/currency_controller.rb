@@ -6,14 +6,15 @@ class CurrencyController < ApplicationController
 
   def convert
     return unless params[:commit]
-
+  
     begin
       rate = ExchangeRateService.new(params[:from_currency], params[:to_currency]).fetch_rate
       @result = params[:amount].to_f * rate
+      session[:conversion_result] = @result  # Store in session
     rescue => e
       flash[:error] = I18n.t('conversion_error')
     end
-  end
+  end  
 
   def set_locale
     if params[:locale].present? && params[:locale] != session[:locale]
